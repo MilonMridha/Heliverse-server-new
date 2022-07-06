@@ -9,7 +9,7 @@ const UserRow = ({ user, refetch, index }) => {
         navigate('/user/' + id)
     }
     const handleDelete = id => {
-        const url = `http://localhost:5000/users/${id}`;
+        const url = `https://thawing-gorge-51396.herokuapp.com/users/${id}`;
 
         fetch(url, {
             method: 'DELETE'

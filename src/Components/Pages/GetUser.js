@@ -5,7 +5,7 @@ import UserRow from './UserRow';
 import signOut from '../../image/signout.png'
 const GetUser = () => {
 
-    const { data: users, refetch } = useQuery('users', () => fetch('http://localhost:5000/users', {
+    const { data: users, refetch } = useQuery('users', () => fetch('https://thawing-gorge-51396.herokuapp.com/users', {
         method: 'GET'
     }).then(res => res.json()))
 

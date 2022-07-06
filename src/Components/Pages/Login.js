@@ -14,7 +14,7 @@ const Login = () => {
         const password = e.target.password.value;
         const user = { email, password };
         console.log(user)
-        fetch(`http://localhost:5000/auth/login`, {
+        fetch(`https://thawing-gorge-51396.herokuapp.com/auth/login`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

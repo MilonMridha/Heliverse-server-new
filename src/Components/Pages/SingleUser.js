@@ -8,7 +8,7 @@ const SingleUser = () => {
     const [detail, setDetail] = useState({});
     const [update, setUpdate] = useState({})
     useEffect(() => {
-        const url = `http://localhost:5000/users/${id}`;
+        const url = `https://thawing-gorge-51396.herokuapp.com/users/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setDetail(data))
@@ -23,7 +23,7 @@ const SingleUser = () => {
         const password = event.target.password.value;
         const newUser = {name, email, password}
     
-    fetch(`http://localhost:5000/users/${id}`, {
+    fetch(`https://thawing-gorge-51396.herokuapp.com/users/${id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'},
