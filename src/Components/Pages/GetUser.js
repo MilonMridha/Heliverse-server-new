@@ -1,11 +1,14 @@
 import React from 'react';
 import { useQuery } from 'react-query';
+import { Link } from 'react-router-dom';
 import UserRow from './UserRow';
 const GetUser = () => {
 
     const { data: users, refetch } = useQuery('users', () => fetch('http://localhost:5000/users', {
         method: 'GET'
     }).then(res => res.json()))
+
+    console.log(users)
     
     return (
         <div>
@@ -20,7 +23,7 @@ const GetUser = () => {
                             <th>Email</th>
                             <th>ID</th>
                             <th>Detail with Id</th>
-                            <th>Update</th>
+                            
                             <th>Delete</th>
 
                         </tr>
@@ -39,6 +42,7 @@ const GetUser = () => {
                     </tbody>
                 </table>
             </div>
+            
 
         </div>
     );
